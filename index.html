@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nithin K S | Software Developer & Full-Stack Architect</title>
+  <meta name="description"
+    content="Nithin K S — Software Developer and Computer Science Engineering student specializing in Java, Spring Boot, Python, Django, React, and MongoDB.">
+  <meta name="keywords"
+    content="Nithin K S, Software Developer, Full Stack Developer, Java, Spring Boot, Python, Django, React, MongoDB, ATME Mysore, JSS Polytechnic">
+  <meta name="author" content="Nithin K S">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nithin K S | Software Developer Portfolio">
+  <meta property="og:description"
+    content="Explore live full-stack projects, OCR systems, and smart attendance platforms built with Java, Python, and MongoDB.">
+  <meta property="og:image" content="assets/project1.png">
+
+  <meta name="theme-color" content="#060610">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%232563eb%22/></svg>">
+
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+  <!-- Ambient Background Canvas & Floating Orbs -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="ambient-orb orb-1" id="orb-1"></div>
+  <div class="ambient-orb orb-2" id="orb-2"></div>
+
+  <!-- Top Scroll Loading Progress Animation Bar -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- Sticky Glass Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-tile">NK</span>
+        <span id="nav-logo-text">Nithin K S</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Credentials</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#github" class="nav-link">GitHub</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: 10px;">
+
+        <a href="#resume" class="nav-pill-btn">Resume PDF</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main>
+
+    <!-- 1. HERO SECTION (#home) -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div class="hero-left">
+          <div class="status-badge" id="status-badge-val">
+            🟢 Available for Software Developer Roles & Full-Stack Opportunities
+          </div>
+          <h1 class="hero-title">
+            HI I AM <span class="text-gradient" id="hero-name">Nithin K S</span>
+          </h1>
+          <div class="typewriter-wrapper">
+            <span id="typewriter-text">Software Developer | Java & Python Full Stack</span><span class="cursor"></span>
+          </div>
+          <p class="hero-tagline" id="hero-tagline">
+            Translating complex technical requirements into functional, high-performance web applications and computer
+            vision solutions using Java, Spring Boot, Python, Django, React, and MongoDB.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Explore Featured Systems →</a>
+            <a href="#resume" class="btn btn-secondary">📄 View Resume PDF</a>
+            <a href="#contact" class="btn btn-secondary" style="background:transparent;">Get In Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="terminal-box">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">DeveloperProfile.java</span>
+              <span style="font-size:12px; color:var(--text-muted);">UTF-8</span>
+            </div>
+            <div class="terminal-body" id="terminal-code-box">
+              <!-- Dynamically populated from PORTFOLIO_DATA -->
+            </div>
+          </div>
+
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT SECTION (#about) -->
+    <section class="section-padding" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Biography & Ethos</span>
+          <h2 class="section-title">Architecting Digital Mastery</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass-card">
+            <h3 style="font-family:var(--font-heading); font-size:1.5rem; color:#fff; margin-bottom:14px;">CS
+              Engineering Foundation & Full-Stack Execution</h3>
+            <!-- Character Reveal Animation Box -->
+            <p class="char-reveal-text" id="char-reveal-box"></p>
+          </div>
+
+          <!-- Highlight Cards -->
+          <div class="highlights-list" id="about-highlights-container">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Quick-Facts Band -->
+        <div class="quick-facts-band" id="quick-facts-band">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. EXPERIENCE SECTION (#experience) WITH CLICKABLE MODAL CARDS -->
+    <section class="section-padding" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Career & Academic Milestones</span>
+          <h2 class="section-title">Experience & Engineering Leadership</h2>
+        </div>
+
+        <div class="timeline" id="timeline-container">
+          <!-- Dynamically populated clickable cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. EDUCATION SECTION (#education) WITH ANIMATED CGPA COUNTERS -->
+    <section class="section-padding" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Academic Credentials</span>
+          <h2 class="section-title">Education & Academic Journey</h2>
+        </div>
+
+        <div class="edu-grid" id="education-grid-container">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SKILLS SECTION (#skills) WITH BRAND-ICON ROWS & BRAND COLORS -->
+    <section class="section-padding" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Comprehensive Technical Stack</span>
+          <h2 class="section-title">Skills & Brand Ecosystem</h2>
+        </div>
+
+        <!-- Categorized Skills Under Dashed Rules -->
+        <div id="skills-container">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PROJECTS SECTION (#projects) WITH SVG COVERS, MODALS & OSS BANNER -->
+    <section class="section-padding" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Featured Case Studies</span>
+          <h2 class="section-title">Full-Stack & Computer Vision Applications</h2>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" id="project-tabs">
+          <button class="tab-btn active" data-filter="all">All Projects</button>
+          <button class="tab-btn" data-filter="web">Java & Spring Boot</button>
+          <button class="tab-btn" data-filter="ai">Python & Computer Vision</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid-container">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- OSS Banner -->
+        <div class="oss-banner">
+          <div>
+            <h3>🌐 Open Source & Research Contributions</h3>
+            <p>Continuously maintaining clean GitHub repositories, writing technical documentation, and exploring
+              computer vision algorithms.</p>
+          </div>
+          <div>
+            <a href="https://github.com/bharadwajnithin" target="_blank" class="btn btn-primary"
+              style="background:var(--accent-emerald); border-color:var(--accent-emerald);">Explore GitHub Profile →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. ACHIEVEMENTS & CERTIFICATIONS (#achievements) WITH CREDLY BADGES -->
+    <section class="section-padding" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Industry Verification</span>
+          <h2 class="section-title">Achievements & Credly Certifications</h2>
+        </div>
+
+        <h3 style="font-family:var(--font-heading); font-size:1.4rem; color:#fff; margin-bottom:20px;">📜 Verified
+          Training Badges (Credly Auto-Synced)</h3>
+        <div class="credly-grid" id="credly-grid-container">
+          <!-- Dynamically populated -->
+        </div>
+
+        <h3 style="font-family:var(--font-heading); font-size:1.4rem; color:#fff; margin:40px 0 20px 0;">🏆 Competitions
+          & Academic Honors</h3>
+        <div style="display:flex; flex-direction:column; gap:16px;" id="competitions-container">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SERVICES SECTION (#services) WITH BENTO GRID & ROTATION ENTRANCE -->
+    <section class="section-padding" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Core Offerings</span>
+          <h2 class="section-title">Services & Engineering Specialties</h2>
+        </div>
+
+        <!-- Bento Grid Container -->
+        <div class="bento-grid" id="bento-grid-container">
+          <!-- Dynamically populated with rotation entrance classes -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. GITHUB SECTION (#github) WITH 3D BROWSER MOCKUP & HEATMAP -->
+    <!-- 9. GITHUB SECTION (#github) - EXACT ISOMETRIC 3D CONTRIBUTION DESIGN -->
+    <section class="section-padding" id="github">
+      <div class="container" style="text-align: center;">
+        <div style="margin-bottom: 36px;">
+          <span class="github-pill-badge">My open source contributions</span>
+          <h2 class="github-main-heading">GitHub Activity</h2>
+        </div>
+
+        <!-- Sleek Minimalist Isometric Contribution Terminal -->
+        <div class="github-contrib-window"
+          style="background:rgba(6, 10, 23, 0.88); backdrop-filter:blur(20px); border:1px solid rgba(56, 189, 248, 0.3); border-radius:20px; box-shadow:0 30px 60px -15px rgba(0,0,0,0.8), 0 0 40px rgba(37,99,235,0.12); max-width:1040px; margin:0 auto; overflow:hidden; text-align:left;">
+          <div class="contrib-window-header"
+            style="background:rgba(255,255,255,0.035); border-bottom:1px solid rgba(255,255,255,0.08); padding:16px 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+            <div class="contrib-window-dots-left" style="display:flex; align-items:center; gap:8px;">
+              <span style="width:10px; height:10px; border-radius:50%; background:#ef4444;"></span>
+              <span style="width:10px; height:10px; border-radius:50%; background:#f59e0b;"></span>
+              <span style="width:10px; height:10px; border-radius:50%; background:#22c55e;"></span>
+              <span
+                style="font-family:var(--font-code); font-size:0.88rem; color:#94a3b8; margin-left:10px;">bharadwajnithin
+                / live-stream</span>
+            </div>
+
+            <button class="toggle-contrib-btn" id="toggle-contrib-mode-btn"
+              style="display:inline-flex; align-items:center; gap:8px; background:rgba(37,99,235,0.22); border:1px solid rgba(56,189,248,0.45); color:#38bdf8; font-weight:600; font-family:var(--font-code); font-size:0.82rem; padding:8px 16px; border-radius:10px; cursor:pointer; transition:all var(--transition-fast); box-shadow:0 0 15px rgba(56,189,248,0.2);">
+              <span>⚡ Switch to 3D Isometric Grid</span>
+            </button>
+          </div>
+
+          <div class="contrib-window-body" style="padding:36px 40px; background:transparent;">
+            <!-- MODE 1: LIVE GITHUB STATS & PROFILE STREAM (DEFAULT ACTIVE) -->
+            <div id="live-chart-wrap"
+              style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px; width:100%;">
+              <div
+                style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; width:100%; padding:18px 24px; background:rgba(37, 99, 235, 0.08); border:1px solid rgba(56, 189, 248, 0.25); border-radius:14px;">
+                <div style="display:flex; align-items:center; gap:14px;">
+                  <span
+                    style="display:inline-block; width:12px; height:12px; background:#38bdf8; border-radius:50%; box-shadow:0 0 12px #38bdf8; animation:pulse 2s infinite;"></span>
+                  <span style="font-family:var(--font-heading); font-weight:700; color:#fff; font-size:1.05rem;"
+                    id="contrib-total-text">⚡ Live GitHub Activity: Connected to API (@bharadwajnithin)</span>
+                </div>
+                <a href="https://github.com/bharadwajnithin" target="_blank" rel="noopener noreferrer"
+                  style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-code); font-size:0.85rem; color:#38bdf8; text-decoration:none; font-weight:600; padding:6px 14px; background:rgba(56, 189, 248, 0.12); border-radius:8px; border:1px solid rgba(56, 189, 248, 0.3);">
+                  View GitHub Profile ↗
+                </a>
+              </div>
+
+              <!-- Live Git Push & Activity Ticker -->
+              <div id="live-git-ticker"
+                style="width:100%; padding:14px 20px; background:rgba(255, 255, 255, 0.025); border:1px dashed rgba(56, 189, 248, 0.2); border-radius:12px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:var(--font-code); font-size:0.84rem; color:#cbd5e1;">
+                <span style="color:#38bdf8; font-weight:600;">📡 LIVE GIT FEED: Syncing public commit history...</span>
+                <span style="color:var(--text-secondary); font-size:0.78rem;">Status: CONNECTED TO GITHUB STREAM</span>
+              </div>
+
+              <!-- Perfectly Aligned Live GitHub Readme Stats Cards -->
+              <div
+                style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:24px; width:100%; justify-items:center; align-items:center;">
+                <img
+                  src="https://github-readme-stats.vercel.app/api?username=bharadwajnithin&show_icons=true&bg_color=060a17&title_color=38bdf8&text_color=cbd5e1&icon_color=2563eb&border_color=2563eb&border_radius=14"
+                  alt="Nithin K S GitHub Stats"
+                  style="width:100%; max-width:480px; height:auto; border-radius:14px; box-shadow:0 15px 35px rgba(0,0,0,0.6); border:1px solid rgba(56, 189, 248, 0.25);"
+                  loading="lazy" />
+                <img
+                  src="https://github-readme-stats.vercel.app/api/top-langs/?username=bharadwajnithin&layout=compact&bg_color=060a17&title_color=38bdf8&text_color=cbd5e1&border_color=2563eb&border_radius=14"
+                  alt="Nithin K S Top Languages"
+                  style="width:100%; max-width:480px; height:auto; border-radius:14px; box-shadow:0 15px 35px rgba(0,0,0,0.6); border:1px solid rgba(56, 189, 248, 0.25);"
+                  loading="lazy" />
+              </div>
+            </div>
+
+            <!-- MODE 2: INTERACTIVE 3D ISOMETRIC HEATMAP GRID (HIDDEN BY DEFAULT WHEN LIVE ACTIVE) -->
+            <div id="interactive-grid-wrap"
+              style="display:none; flex-direction:column; align-items:center; width:100%;">
+              <!-- Month Header Bar -->
+              <div class="contrib-months-bar"
+                style="width:100%; max-width:880px; display:flex; justify-content:space-between; margin-bottom:12px; font-family:var(--font-code); font-size:0.8rem; color:#94a3b8;">
+                <span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+              </div>
+
+              <!-- 3D Isometric Tilted Heatmap Grid -->
+              <div class="perspective-heatmap-wrapper"
+                style="width:100%; display:flex; justify-content:center; overflow-x:auto;">
+                <div class="heatmap-grid perspective-heatmap-grid" id="heatmap-grid">
+                  <!-- Dynamically populated 52x7 grid with 3D tilt -->
+                </div>
+              </div>
+
+              <!-- Bottom Stats / Legend Bar -->
+              <div class="contrib-bottom-bar"
+                style="width:100%; max-width:880px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-top:20px; font-family:var(--font-code); font-size:0.85rem; color:#cbd5e1;">
+                <span>⚡ Interactive 3D Contribution Grid (52 Weeks)</span>
+                <div class="contrib-legend-wrap" style="display:flex; align-items:center; gap:6px;">
+                  <span>Less</span>
+                  <span class="legend-box heat-0"></span>
+                  <span class="legend-box heat-1"></span>
+                  <span class="legend-box heat-2"></span>
+                  <span class="legend-box heat-3"></span>
+                  <span class="legend-box heat-4"></span>
+                  <span>More</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME BANNER SECTION (#resume) -->
+    <section class="section-padding" id="resume">
+      <div class="container">
+        <div class="glass-card resume-hub-card scroll-up-item" id="resume-card-wrapper"
+          style="background:linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(139, 92, 246, 0.15)); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 20px; padding: 36px; display:flex; flex-direction:column; gap:24px; transition:all var(--transition-smooth);">
+
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+            <div>
+              <div
+                style="display:inline-flex; align-items:center; gap:8px; padding:6px 14px; background:rgba(56, 189, 248, 0.12); border:1px solid rgba(56, 189, 248, 0.3); border-radius:999px; font-family:var(--font-code); font-size:0.78rem; color:#38bdf8; font-weight:700; margin-bottom:14px;"
+                id="resume-status-badge">
+                <span
+                  style="display:inline-block; width:8px; height:8px; background:#38bdf8; border-radius:50%; box-shadow:0 0 8px #38bdf8;"
+                  id="resume-status-dot"></span>
+                MODE: INTERACTIVE WEB VIEW
+              </div>
+              <h3
+                style="font-family:var(--font-heading); font-size:clamp(1.8rem, 4vw, 2.4rem); font-weight:800; color:#fff; margin-bottom:10px; line-height:1.2;">
+                📄 Nithin K S — Professional Resume Hub
+              </h3>
+              <p style="color:var(--text-secondary); max-width:680px; font-size:1.02rem; line-height:1.65;"
+                id="resume-desc-text">
+                Access complete academic records, verified system architecture schematics, and skill breakdowns in clean
+                interactive web document mode or download directly as an ATS-optimized high-resolution PDF.
+              </p>
+            </div>
+
+            <!-- ON / OFF Interactive Cyber Switcher -->
+            <div
+              style="background:rgba(11, 15, 25, 0.85); border:1px solid rgba(255,255,255,0.12); padding:12px 18px; border-radius:16px; display:flex; flex-direction:column; align-items:center; gap:8px; min-width:210px;">
+              <span
+                style="font-family:var(--font-code); font-size:0.75rem; color:#94a3b8; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">Quick
+                Action Switch</span>
+              <div class="resume-toggle-track" id="resume-toggle-track" role="switch" aria-checked="false" tabindex="0">
+                <div class="resume-toggle-thumb" id="resume-toggle-thumb"></div>
+                <span class="resume-toggle-label left active" id="toggle-lbl-view">👁️ View</span>
+                <span class="resume-toggle-label right" id="toggle-lbl-dl">📥 PDF</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dual Action Buttons -->
+          <div
+            style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; border-top:1px solid rgba(255,255,255,0.08); padding-top:24px;">
+            <a id="resume-view-btn" href="assets/Nithin_KS_Resume.html" target="_blank"
+              class="btn btn-primary resume-btn-active"
+              style="padding:15px 32px; font-size:1rem; display:inline-flex; align-items:center; gap:10px;">
+              <span>👁️</span> View Interactive Resume
+            </a>
+            <a id="resume-download-btn" href="assets/Nithin_KS_Resume.html?print=true" target="_blank"
+              class="btn btn-outline"
+              style="padding:15px 32px; font-size:1rem; display:inline-flex; align-items:center; gap:10px;">
+              <span>📥</span> Download / Print PDF
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THE UNFINISHED PROFILE — Cinematic Scroll Reveal ============ -->
+    <section class="pf-unfinished" id="unfinished-section" aria-labelledby="unfinishedTitle">
+      <div class="pf-unfinished-inner">
+        <h2 id="unfinishedTitle">
+          <span class="pf-reveal-line" data-reveal="1">This portfolio</span>
+          <span class="pf-reveal-line" data-reveal="2">is not finished.</span>
+        </h2>
+        <p class="pf-neither-line" data-reveal="3">Neither am I<span class="pf-caret">|</span></p>
+        <a href="#contact" class="pf-final-link" data-reveal="4">
+          <span>Let's build</span>
+          <span>something.</span>
+        </a>
+        <div class="pf-final-actions" data-reveal="5">
+          <a href="mailto:bharadwajnithin666@gmail.com" class="pf-action-link">Email</a>
+          <a href="https://github.com/bharadwajnithin" target="_blank" rel="noopener"
+            class="pf-action-link pf-action-link-accent">GitHub</a>
+          <a href="https://www.linkedin.com/in/bharadwajnithin" target="_blank" rel="noopener"
+            class="pf-action-link">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CONTACT SECTION (#contact) — EXACT MEENADIGISOLUTIONS.IN/CONTACT REPLICA -->
+    <section class="section-padding contact-section" id="contact">
+      <div class="container">
+        <!-- Contact Header -->
+        <div class="contact-header scroll-up-item">
+          <h2 class="contact-title">Contact</h2>
+        </div>
+
+        <!-- 2-Column Contact Grid -->
+        <div class="contact-grid">
+          <!-- Left Column: DIRECT LINES -->
+          <div class="contact-direct-lines scroll-up-item">
+            <div class="contact-col-header">— DIRECT LINES</div>
+
+
+
+            <a href="mailto:bharadwajnithin666@gmail.com" class="contact-line-card">
+              <div class="contact-line-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-line-info">
+                <span class="contact-line-label">Email</span>
+                <strong class="contact-line-value" style="font-size:1.02rem;">bharadwajnithin666@gmail.com</strong>
+                <span class="contact-line-sub">Primary • nithinks2025@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/bharadwajnithin" target="_blank" rel="noopener" class="contact-line-card">
+              <div class="contact-line-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+              </div>
+              <div class="contact-line-info">
+                <span class="contact-line-label">GitHub</span>
+                <strong class="contact-line-value">bharadwajnithin</strong>
+                <span class="contact-line-sub">Open source projects & contributions</span>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/bharadwajnithin" target="_blank" rel="noopener"
+              class="contact-line-card">
+              <div class="contact-line-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#0A66C2">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </div>
+              <div class="contact-line-info">
+                <span class="contact-line-label">LinkedIn</span>
+                <strong class="contact-line-value">bharadwajnithin</strong>
+                <span class="contact-line-sub">Professional network & experience</span>
+              </div>
+            </a>
+
+            <!-- 24-Hour Promise Box -->
+            <div class="contact-promise-box">
+              <div class="contact-promise-title">⚡ The 24-hour promise</div>
+              <p>Every inquiry gets a personal reply from Nithin within one working day — with real architectural
+                thoughts and feasibility analysis on your project, not a canned brochure.</p>
+            </div>
+          </div>
+
+          <!-- Right Column: START THE CONVERSATION FORM -->
+          <div class="contact-form-card scroll-up-item">
+            <div class="contact-col-header">START THE CONVERSATION</div>
+            <p class="contact-form-sub">Sixty seconds to fill. We handle the rest.</p>
+
+            <form id="contact-form" class="contact-form">
+              <div class="contact-form-group">
+                <label for="contact-name">YOUR NAME *</label>
+                <input type="text" id="contact-name" class="contact-input" placeholder="John Doe" required>
+              </div>
+
+              <div class="contact-form-group">
+                <label for="contact-contact">EMAIL *</label>
+                <input type="email" id="contact-contact" class="contact-input" placeholder="john@example.com" required>
+              </div>
+
+              <div class="contact-form-group">
+                <label for="contact-msg">MESSAGE *</label>
+                <textarea id="contact-msg" class="contact-input contact-textarea" rows="4"
+                  placeholder="Tell us about your project..." required></textarea>
+              </div>
+
+              <div class="contact-form-actions">
+                <button type="submit" class="contact-btn-primary">
+                  Send Message →
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- What Happens Next Section -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Main Interactive Modal Overlay (For Experience Timeline & Projects) -->
+  <div class="modal-overlay" id="main-modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close Modal">✕</button>
+      <div id="modal-content-body">
+        <!-- Dynamically injected modal content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification">
+    ✨ Message Sent Successfully! Nithin K S will get back to you shortly.
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Nithin K S. Built with modern 10-section web design & engineering principles.</p>
+    </div>
+  </footer>
+
+  <!-- Unique Interactive Cyber Cursor -->
+  <div class="custom-cursor-dot" id="cursor-dot"></div>
+  <div class="custom-cursor-ring" id="cursor-ring"></div>
+
+  <!-- JS Controllers & Libraries -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

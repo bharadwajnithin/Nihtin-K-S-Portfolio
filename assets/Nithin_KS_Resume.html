@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nithin K S - Professional Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    :root {
+      --primary: #0f172a;
+      --secondary: #334155;
+      --accent: #2563eb;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--primary);
+      background-color: #f8fafc;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 50px 60px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    .header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .header .subtitle {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .contact-info {
+      text-align: right;
+      font-size: 13.5px;
+      color: var(--secondary);
+    }
+    .contact-info a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 6px;
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+    .item {
+      margin-bottom: 18px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+    .item-title {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .item-subtitle {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--secondary);
+    }
+    .item-date {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--secondary);
+    }
+    ul.bullet-list {
+      margin-left: 20px;
+      margin-top: 6px;
+    }
+    ul.bullet-list li {
+      font-size: 14px;
+      color: var(--secondary);
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      row-gap: 10px;
+      font-size: 14px;
+    }
+    .skill-category {
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .skill-items {
+      color: var(--secondary);
+    }
+    .print-btn-bar {
+      max-width: 850px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn {
+      padding: 10px 20px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn:hover {
+      background: #1d4ed8;
+    }
+    @media print {
+      body {
+        background: transparent;
+        padding: 0;
+      }
+      .resume-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+        border-radius: 0;
+      }
+      .print-btn-bar {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-btn-bar">
+    <div><a href="../index.html" class="btn" style="background:#475569;">← Back to Portfolio</a></div>
+    <button onclick="window.print()" class="btn">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="resume-container">
+    <!-- Header -->
+    <div class="header">
+      <div>
+        <h1>Nithin K S</h1>
+        <div class="subtitle">Software Developer | Java & Python Full Stack</div>
+      </div>
+      <div class="contact-info">
+        <div>Mysore, Karnataka, India</div>
+        <div>+91 7975048013</div>
+        <div><a href="mailto:bharadwajnithin666@gmail.com">bharadwajnithin666@gmail.com</a></div>
+        <div><a href="https://github.com/bharadwajnithin" target="_blank">github.com/bharadwajnithin</a></div>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="section-title">Professional Summary</div>
+    <p style="font-size: 14px; color: var(--secondary); line-height: 1.6; margin-bottom: 20px;">
+      Dedicated Software Developer and Computer Science & Engineering student at ATME College of Engineering, Mysore (expected graduation 2026), combining a strong foundation in CS fundamentals with practical experience across backend and frontend technologies including Java, Python, Spring Boot, Django, React, MySQL, and MongoDB. Skilled in translating technical requirements into functional, user-friendly applications and building intelligent OCR & computer vision systems.
+    </p>
+
+    <!-- Skills -->
+    <div class="section-title">Technical Competencies</div>
+    <div class="skills-grid">
+      <div class="skill-category">Languages & Frontend:</div>
+      <div class="skill-items">Java, Python, JavaScript (ES6+), HTML5 & CSS3, React.js, Axios</div>
+      <div class="skill-category">Frameworks & Backend:</div>
+      <div class="skill-items">Spring Boot, RESTful APIs, Django Web Framework</div>
+      <div class="skill-category">Databases & Cloud/APIs:</div>
+      <div class="skill-items">MongoDB, MySQL, Google Maps API (Geo-Fencing)</div>
+      <div class="skill-category">Tools & Core CS:</div>
+      <div class="skill-items">OpenCV, Tesseract-OCR, Git, GitHub, Linux Fundamentals, Data Structures & Algorithms, OOP, DBMS</div>
+    </div>
+
+    <!-- Education -->
+    <div class="section-title">Education & Academic Journey</div>
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">ATME College of Engineering, Mysore</div>
+        <div class="item-date">2023 – 2026 (Expected)</div>
+      </div>
+      <div class="item-subtitle">Bachelor of Engineering (B.E.) in Computer Science & Engineering | CGPA: 7.1 / 10</div>
+      <ul class="bullet-list">
+        <li>Key Coursework: Data Structures & Algorithms, Object-Oriented Programming, Operating Systems, DBMS, Software Engineering.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">JSS Polytechnic, Mysore</div>
+        <div class="item-date">2020 – 2023</div>
+      </div>
+      <div class="item-subtitle">Diploma in Computer Science & Engineering | Graduated with High Distinction (CGPA: 8.15 / 10)</div>
+      <ul class="bullet-list">
+        <li>Key Coursework: Linux Operating Systems, Web Development & PHP/MySQL, Computer Networks, Core Java Programming.</li>
+      </ul>
+    </div>
+
+    <!-- Projects -->
+    <div class="section-title">Key Projects & Systems Experience</div>
+    
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">Expense Tracker — Full-Stack Financial Dashboard</div>
+        <div class="item-date">Java, Spring Boot, React.js, MongoDB, Chart.js</div>
+      </div>
+      <ul class="bullet-list">
+        <li>Architected and built a clean REST API backend using Java and Spring Boot communicating asynchronously with a dynamic React.js UI.</li>
+        <li>Implemented full CRUD capabilities with category indexing in MongoDB and dynamic statistics rendering via Chart.js.</li>
+        <li>Integrated automated financial report export functionality allowing downloads in Excel (Apache POI) and PDF (iText) formats.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">Image-to-Text OCR Converter — Intelligent Extraction Web App</div>
+        <div class="item-date">Python, Django, Tesseract-OCR, OpenCV, FPDF</div>
+      </div>
+      <ul class="bullet-list">
+        <li>Developed a web-based optical character recognition platform extracting text from complex documents and low-contrast scanned images.</li>
+        <li>Optimized character recognition accuracy by implementing automated noise reduction, grayscale conversion, and adaptive thresholding in OpenCV.</li>
+        <li>Built real-time PDF generation using FPDF to allow users to instantly export extracted text with formatting preserved.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">Geo-Location + Face Recognition Smart Attendance System</div>
+        <div class="item-date">Python, Django, OpenCV, Google Maps API, MongoDB</div>
+      </div>
+      <ul class="bullet-list">
+        <li>Engineered a dual-factor biometric attendance verification system requiring authorized GPS location and successful facial match.</li>
+        <li>Enforced strict spatial classroom boundaries using Google Maps API geo-fencing combined with real-time OpenCV facial identity verification.</li>
+        <li>Designed role-based access control (RBAC) portals for Admin, Staff, and Students backed by secure MongoDB audit trails.</li>
+      </ul>
+    </div>
+
+    <!-- Certifications -->
+    <div class="section-title">Certifications & Leadership</div>
+    <ul class="bullet-list" style="margin-left: 20px;">
+      <li><strong>Git and GitHub Basics — Version Control Mastery:</strong> Hands-on proficiency managing repositories, branching, and code collaboration.</li>
+      <li><strong>Python Programming Comprehensive Certification:</strong> Mastered advanced data structures, scripting, and system automation.</li>
+      <li><strong>Linux Operating System Fundamentals & Command Line:</strong> Experienced in bash scripting, environment configuration, and system administration across Linux/Unix platforms.</li>
+    </ul>
+
+    </div>
+
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('print') === 'true') {
+        setTimeout(() => {
+          window.print();
+        }, 500);
+      }
+    });
+  </script>
+</body>
+</html>
