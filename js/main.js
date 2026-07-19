@@ -272,15 +272,17 @@ function initAchievementsAndCredly() {
   const certGrid = document.getElementById('credly-grid-container');
   if (certGrid && achievements && Array.isArray(achievements.certifications)) {
     certGrid.innerHTML = achievements.certifications.map(c => `
-      <div class="credly-card">
-        <div class="credly-icon-wrap" style="color:${c.badgeColor}">${c.badgeIcon}</div>
-        <div>
-          <div class="credly-synced-pill">✓ Credly Synced Badge</div>
-          <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:#fff; margin-bottom:4px;">${c.name}</h4>
-          <p style="font-size:0.86rem; color:var(--text-secondary); margin-bottom:8px;">Issued by: ${c.issuer}</p>
-          <span style="font-family:var(--font-code); font-size:0.75rem; color:var(--accent-cyan);">ID: ${c.credentialId}</span>
+      <a href="${c.verifyUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block; outline: none;">
+        <div class="credly-card" style="cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          <div class="credly-icon-wrap" style="color:${c.badgeColor}">${c.badgeIcon}</div>
+          <div>
+            <div class="credly-synced-pill">✓ Credly Synced Badge</div>
+            <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:#fff; margin-bottom:4px;">${c.name}</h4>
+            <p style="font-size:0.86rem; color:var(--text-secondary); margin-bottom:8px;">Issued by: ${c.issuer}</p>
+            <span style="font-family:var(--font-code); font-size:0.75rem; color:var(--accent-cyan);">ID: ${c.credentialId}</span>
+          </div>
         </div>
-      </div>
+      </a>
     `).join('');
   }
 
@@ -320,41 +322,10 @@ function initServicesBentoGrid() {
 }
 
 function initGitHubMockupAndHeatmap() {
-  const { githubSection } = PORTFOLIO_DATA;
-  const heatmapGrid = document.getElementById('heatmap-grid');
   const liveWrap = document.getElementById('live-chart-wrap');
-  const interactiveGridWrap = document.getElementById('interactive-grid-wrap');
-  const toggleBtn = document.getElementById('toggle-contrib-mode-btn');
   const totalText = document.getElementById('contrib-total-text');
   const ticker = document.getElementById('live-git-ticker');
 
-  // Render 52-week baseline contribution heatmap (will be augmented live with real events below)
-  if (heatmapGrid && githubSection.heatmapData) {
-    heatmapGrid.innerHTML = githubSection.heatmapData.map((week, wIdx) => `
-      <div class="heatmap-col">
-        ${week.map((dayLevel, dIdx) => `<div class="heatmap-day heat-${dayLevel}" id="heatcell-${wIdx}-${dIdx}" title="Contribution level: ${dayLevel}"></div>`).join('')}
-      </div>
-    `).join('');
-  }
-
-  // Handle Mode Toggle (Live Chart vs Interactive 3D Grid)
-  if (toggleBtn && liveWrap && interactiveGridWrap) {
-    let showingLive = true;
-    toggleBtn.addEventListener('click', () => {
-      showingLive = !showingLive;
-      if (showingLive) {
-        liveWrap.style.display = 'flex';
-        interactiveGridWrap.style.display = 'none';
-        toggleBtn.querySelector('span').textContent = '⚡ Switch to 3D Isometric Grid';
-      } else {
-        liveWrap.style.display = 'none';
-        interactiveGridWrap.style.display = 'flex';
-        toggleBtn.querySelector('span').textContent = '⚡ Switch to Live GitHub Stats';
-      }
-    });
-  }
-
-  // Fetch real-time live GitHub user stats & recent activity events
   fetch('https://api.github.com/users/bharadwajnithin')
     .then(res => res.json())
     .then(data => {
