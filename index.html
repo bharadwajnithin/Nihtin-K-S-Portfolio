@@ -277,43 +277,36 @@
           </div>
 
           <div class="contrib-window-body" style="padding:36px 40px; background:transparent;">
-            <!-- MODE 1: LIVE GITHUB STATS & PROFILE STREAM (DEFAULT ACTIVE) -->
-            <div id="live-chart-wrap"
-              style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px; width:100%;">
-              <div
-                style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; width:100%; padding:18px 24px; background:rgba(37, 99, 235, 0.08); border:1px solid rgba(56, 189, 248, 0.25); border-radius:14px;">
-                <div style="display:flex; align-items:center; gap:14px;">
-                  <span
-                    style="display:inline-block; width:12px; height:12px; background:#38bdf8; border-radius:50%; box-shadow:0 0 12px #38bdf8; animation:pulse 2s infinite;"></span>
-                  <span style="font-family:var(--font-heading); font-weight:700; color:#fff; font-size:1.05rem;"
-                    id="contrib-total-text">⚡ Live GitHub Activity: Connected to API (@bharadwajnithin)</span>
+            <!-- INTERACTIVE 3D ISOMETRIC HEATMAP GRID -->
+            <div id="interactive-grid-wrap"
+              style="display:flex; flex-direction:column; align-items:center; width:100%;">
+              <!-- Month Header Bar -->
+              <div class="contrib-months-bar"
+                style="width:100%; max-width:880px; display:flex; justify-content:space-between; margin-bottom:12px; font-family:var(--font-code); font-size:0.8rem; color:#94a3b8;">
+                <span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+              </div>
+
+              <!-- 3D Isometric Tilted Heatmap Grid -->
+              <div class="perspective-heatmap-wrapper"
+                style="width:100%; display:flex; justify-content:center; overflow-x:auto;">
+                <div class="heatmap-grid perspective-heatmap-grid" id="heatmap-grid">
+                  <!-- Dynamically populated 52x7 grid with 3D tilt -->
                 </div>
-                <a href="https://github.com/bharadwajnithin" target="_blank" rel="noopener noreferrer"
-                  style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-code); font-size:0.85rem; color:#38bdf8; text-decoration:none; font-weight:600; padding:6px 14px; background:rgba(56, 189, 248, 0.12); border-radius:8px; border:1px solid rgba(56, 189, 248, 0.3);">
-                  View GitHub Profile ↗
-                </a>
               </div>
 
-              <!-- Live Git Push & Activity Ticker -->
-              <div id="live-git-ticker"
-                style="width:100%; padding:14px 20px; background:rgba(255, 255, 255, 0.025); border:1px dashed rgba(56, 189, 248, 0.2); border-radius:12px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:var(--font-code); font-size:0.84rem; color:#cbd5e1;">
-                <span style="color:#38bdf8; font-weight:600;">📡 LIVE GIT FEED: Syncing public commit history...</span>
-                <span style="color:var(--text-secondary); font-size:0.78rem;">Status: CONNECTED TO GITHUB STREAM</span>
-              </div>
-
-              <!-- Perfectly Aligned Live GitHub Readme Stats Cards -->
-              <div
-                style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:24px; width:100%; justify-items:center; align-items:center;">
-                <img
-                  src="https://github-readme-stats.vercel.app/api?username=bharadwajnithin&show_icons=true&bg_color=060a17&title_color=38bdf8&text_color=cbd5e1&icon_color=2563eb&border_color=2563eb&border_radius=14"
-                  alt="Nithin K S GitHub Stats"
-                  style="width:100%; max-width:480px; height:auto; border-radius:14px; box-shadow:0 15px 35px rgba(0,0,0,0.6); border:1px solid rgba(56, 189, 248, 0.25);"
-                  loading="lazy" />
-                <img
-                  src="https://github-readme-stats.vercel.app/api/top-langs/?username=bharadwajnithin&layout=compact&bg_color=060a17&title_color=38bdf8&text_color=cbd5e1&border_color=2563eb&border_radius=14"
-                  alt="Nithin K S Top Languages"
-                  style="width:100%; max-width:480px; height:auto; border-radius:14px; box-shadow:0 15px 35px rgba(0,0,0,0.6); border:1px solid rgba(56, 189, 248, 0.25);"
-                  loading="lazy" />
+              <!-- Bottom Stats / Legend Bar -->
+              <div class="contrib-bottom-bar"
+                style="width:100%; max-width:880px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-top:20px; font-family:var(--font-code); font-size:0.85rem; color:#cbd5e1;">
+                <span>⚡ Live 3D Contribution Grid (52 Weeks)</span>
+                <div class="contrib-legend-wrap" style="display:flex; align-items:center; gap:6px;">
+                  <span>Less</span>
+                  <span class="legend-box heat-0"></span>
+                  <span class="legend-box heat-1"></span>
+                  <span class="legend-box heat-2"></span>
+                  <span class="legend-box heat-3"></span>
+                  <span class="legend-box heat-4"></span>
+                  <span>More</span>
+                </div>
               </div>
             </div>
           </div>

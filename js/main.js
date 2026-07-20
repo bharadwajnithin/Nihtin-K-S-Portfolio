@@ -322,9 +322,20 @@ function initServicesBentoGrid() {
 }
 
 function initGitHubMockupAndHeatmap() {
+  const { githubSection } = PORTFOLIO_DATA;
+  const heatmapGrid = document.getElementById('heatmap-grid');
   const liveWrap = document.getElementById('live-chart-wrap');
   const totalText = document.getElementById('contrib-total-text');
   const ticker = document.getElementById('live-git-ticker');
+
+  // Render 52-week baseline contribution heatmap
+  if (heatmapGrid && githubSection && githubSection.heatmapData) {
+    heatmapGrid.innerHTML = githubSection.heatmapData.map((week, wIdx) => `
+      <div class="heatmap-col">
+        ${week.map((dayLevel, dIdx) => `<div class="heatmap-day heat-${dayLevel}" id="heatcell-${wIdx}-${dIdx}" title="Contribution level: ${dayLevel}"></div>`).join('')}
+      </div>
+    `).join('');
+  }
 
   fetch('https://api.github.com/users/bharadwajnithin')
     .then(res => res.json())
